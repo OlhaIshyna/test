@@ -1,0 +1,9 @@
+Connect-AzAccount -TenantId 
+
+$MyScriptBlock= {Get-AzVm | Get-AzVm -Status  | select @{n="Subscription"; e={(Get-AzContext).Subscription.Name}}, ResourceGroupName, Name ,
+ @{n="Tenant"; e={(Get-AzContext).Tenant}}, 
+ @{n="Provisioned Time"; e={$_.Statuses[0].Time}}, 
+ @{n="Provisioned Status"; e={$_.Statuses[0].DisplayStatus}}, 
+ @{n="Running Status"; e={$_.Statuses[1].DisplayStatus}}, 
+ @{n="Tags"; e={(Get-AzVM).Tags.Values}}}
+Invoke-AzureCommand -ScriptBlock $MyScriptBlock -AllSubscriptions
