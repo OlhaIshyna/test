@@ -1,5 +1,3 @@
-[Yesterday 9:54 PM] Olha Ishyna
-
 $f = Get-ChildItem 'C:\temp\' #Please note that this file should be accessible from SQL server service account
 
 $NewDB = 'AxDB_NEW' #'AxDB_CTS1005BU2'  #Temporary Database name for new AxDB. Use a file name or any meaningful name.
