@@ -224,6 +224,3 @@ where NETWORKALIAS not like '%@contosoax7.onmicrosoft.com'
 
 Invoke-DbaQuery -SqlInstance localhost -Database AxDB -Query $sqlGetUsers | FT
 
-[Yesterday 9:55 PM] Olha Ishyna
-
-путь к базе
