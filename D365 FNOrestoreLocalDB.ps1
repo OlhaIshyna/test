@@ -223,4 +223,3 @@ where NETWORKALIAS not like '%@contosoax7.onmicrosoft.com'
 "@
 
 Invoke-DbaQuery -SqlInstance localhost -Database AxDB -Query $sqlGetUsers | FT
-
